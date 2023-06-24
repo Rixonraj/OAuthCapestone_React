@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import './sb-admin-2.css'
+import Login from './Components/Login';
+import {BrowserRouter,Routes,Route, Link, Navigate} from 'react-router-dom'
+import Home from './Components/Home';
+import Product from './Components/Product';
+import { useContext } from 'react';
+import { myContext } from './Context';
 
 function App() {
+  const user = false;
+  const userObject = useContext(myContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+      <Route path='/' element={userObject ? <Home/> : <Navigate to ='/login'/>}></Route>
+      <Route path='/login' element={userObject ? <Navigate to ='/'/>:<Login/>}></Route>
+      <Route path='/product' element={userObject ? <Product/> : <Navigate to ='/login'/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
