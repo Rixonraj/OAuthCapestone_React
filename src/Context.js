@@ -12,6 +12,7 @@ function Context(props) {
         .then((res)=>{
             if (res.data) {
                 setuserObject(res.data)
+                console.log(`myContext   :  ${process.env.REACT_APP_BACKENDURL}/getuser`)
             }
         })
       

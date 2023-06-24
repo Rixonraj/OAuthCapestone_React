@@ -7,6 +7,7 @@ import axios from 'axios';
 
 function Home() {
   const userObject = useContext(myContext);
+  console.log("HOMEEEEEE:",  userObject)
 const logout = () => {
   axios.get(`${process.env.REACT_APP_BACKENDURL}/auth/logout`,{withCredentials:true})
   .then((res)=>{
