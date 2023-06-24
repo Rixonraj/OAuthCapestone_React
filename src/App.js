@@ -8,8 +8,9 @@ import { useContext } from 'react';
 import { myContext } from './Context';
 
 function App() {
-  const user = false;
+  // const user = false;
   const userObject = useContext(myContext);
+  console.log(userObject)
   return (
     <BrowserRouter>
       <Routes>
