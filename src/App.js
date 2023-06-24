@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path='/home' element={userObject ? <Home/> : <Navigate to ='/login'/>}></Route>
+      <Route path='/' element={userObject ? <Home/> : <Navigate to ='/login'/>}></Route>
       <Route path='/login' element={userObject ? <Navigate to ='/'/>:<Login/>}></Route>
       <Route path='/product' element={userObject ? <Product/> : <Navigate to ='/login'/>}></Route>
       </Routes>
