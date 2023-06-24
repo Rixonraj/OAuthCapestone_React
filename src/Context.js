@@ -1,7 +1,5 @@
 import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react'
-import{AxiosResponse} from 'axios'
-import { type } from '@testing-library/user-event/dist/type';
+import React, { createContext, useEffect, useState } from 'react';
 
 export const myContext = createContext({});
 function Context(props) {
