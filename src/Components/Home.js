@@ -8,7 +8,7 @@ import axios from 'axios';
 function Home() {
   const userObject = useContext(myContext);
 const logout = () => {
-  axios.get(`${process.env.development.REACT_APP_BACKENDURL}/auth/logout`,{withCredentials:true})
+  axios.get(`${process.env.REACT_APP_BACKENDURL}/auth/logout`,{withCredentials:true})
   .then((res)=>{
       if (res.data) {
         window.location.href = "/login"

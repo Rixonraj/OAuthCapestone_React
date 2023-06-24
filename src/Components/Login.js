@@ -4,13 +4,13 @@ import React from 'react'
 
 function Login() {
     const googleLogin = ()=>{
-        window.open(`${process.env.development.REACT_APP_BACKENDURL}/login/google`,"_self");
+        window.open(`${process.env.REACT_APP_BACKENDURL}/login/google`,"_self");
     };
     const facebookLogin = ()=>{
-        window.location.href = `${process.env.development.REACT_APP_BACKENDURL}/login/facebook`
+        window.location.href = `${process.env.REACT_APP_BACKENDURL}/login/facebook`
     };
     const githubLogin = ()=>{
-        window.location.href = `${process.env.development.REACT_APP_BACKENDURL}/login/github`
+        window.location.href = `${process.env.REACT_APP_BACKENDURL}/login/github`
     };
 
   return (
