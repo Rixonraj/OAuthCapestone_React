@@ -9,7 +9,6 @@ import { myContext } from './Context';
 
 function App() {
   const userObject = useContext(myContext);
-  console.log("userObject",userObject)
   return (
     <BrowserRouter>
       <Routes>

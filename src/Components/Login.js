@@ -30,7 +30,7 @@ function Login() {
                                 <h1 className="h4 text-gray-900 mb-4">Welcome To Capestone OAuth!</h1>
                             </div>
                             <form className="user">
-                                <div className="form-group">
+                                {/* <div className="form-group">
                                     <input type="email" className="form-control form-control-user"
                                         id="exampleInputEmail" aria-describedby="emailHelp"
                                         placeholder="Enter Email Address..."/>
@@ -49,7 +49,7 @@ function Login() {
                                 <a href="index.html" className="btn btn-primary btn-user btn-block">
                                     Login
                                 </a>
-                                <hr/>
+                                <hr/> */}
                                
                                 <div className="btn btn-google btn-user btn-block" onClick={googleLogin}>
                                 <FontAwesomeIcon icon= {faGoogle} /> Login with Google
